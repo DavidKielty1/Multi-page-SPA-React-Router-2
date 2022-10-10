@@ -1,3 +1,19 @@
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
 { Switch, Route, Redirect } from 'react-router-dom'
 
 Nested routes within components; welcome component route -> /welcome, /welcome/new-user
