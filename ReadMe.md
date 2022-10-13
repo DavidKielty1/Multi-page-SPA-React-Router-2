@@ -1,7 +1,25 @@
 Adding query paramater values into URL, e.g. sorting by ascending '/quotes?sort=asc' with useHistory, history.push
 
 { useLocation } from 'react-router-dom' gives us information about the currently loaded URL page.
-. . . . const location = useLocation();
+. . . . const location = useLocation();. You can get the current location.pathname.
+
+      const changeSortingHandler = () => {
+      history.push(
+            `${location.pathname}?sort=${isSortingAscending ? "desc" : "asc"}`
+      );
+      };
+
+      |
+      |
+      V
+
+useHistory hook allows you to set links as objects
+
+      const changeSortingHandler = () => {
+      history.push({
+            pathname: location.pathname,
+            search: `sort=${isSortingAscending ? "desc" : "asc"}`,
+      });
 
 new URLSearchParams() default JS constructor function/class built into the browser
 
@@ -10,6 +28,8 @@ Changing URL and text on screen isSortedAscending();
 A lot of jiggery pockery was done with sortedQuotes() to sort quotes on screen.
 
 Nested Routes - see quote detail comments route. Conditionally render components based on url/route. <Route path={.../quoteId}>
+
+use {useRouteMatch}, const match = useRouteMatch(); to copy path or url rather than hard-code.
 
 .
 
