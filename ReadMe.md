@@ -9,6 +9,8 @@ Changing URL and text on screen isSortedAscending();
 
 A lot of jiggery pockery was done with sortedQuotes() to sort quotes on screen.
 
+Nested Routes - see quote detail comments route. Conditionally render components based on url/route. <Route path={.../quoteId}>
+
 .
 
 .
