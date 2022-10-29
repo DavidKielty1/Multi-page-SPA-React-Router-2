@@ -1,5 +1,6 @@
 const FIREBASE_DOMAIN =
   "https://reduxadvancedd-default-rtdb.europe-west1.firebasedatabase.app";
+//3@gmail
 
 export async function getAllQuotes() {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`);
